@@ -1,4 +1,4 @@
-#include "hexo_GUI.h"
+﻿#include "hexo_GUI.h"
 
 hexo_GUI::hexo_GUI(QWidget *parent)
 	: QMainWindow(parent)

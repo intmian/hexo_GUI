@@ -1,4 +1,4 @@
-#include "hexo_GUI.h"
+﻿#include "hexo_GUI.h"
 #include <QtWidgets/QApplication>
 
 int main(int argc, char *argv[])

@@ -36,6 +36,9 @@
     <ClCompile Include="hexo_GUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="install_judge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="hexo_GUI.h">
@@ -46,10 +49,18 @@
     <QtUic Include="hexo_GUI.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="Widget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="hexo_GUI.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="install_judge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

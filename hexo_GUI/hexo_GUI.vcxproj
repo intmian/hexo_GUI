@@ -115,15 +115,20 @@
   <ItemGroup>
     <ClCompile Include="hexo_GUI.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="install_judge.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="hexo_GUI.h" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="hexo_GUI.ui" />
+    <QtUic Include="Widget.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="hexo_GUI.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="install_judge.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
