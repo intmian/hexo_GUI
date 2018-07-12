@@ -44,7 +44,7 @@ bool installer::start()
 
 bool installer::startProcess(std::wstring place)
 {
-	if (_wsystem(place.data()) == 0)
+	if (_wsystem((L"start "+place).data()) == 0)
 		return true;
 	else 
 		return false;
