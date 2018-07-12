@@ -23,3 +23,5 @@ public:
 	installer(std::wstring place);//place是exe的上一层文件夹
 };
 #endif // !_CLASS_installer
+
+std::string WStringToString(const std::wstring & wstr);
