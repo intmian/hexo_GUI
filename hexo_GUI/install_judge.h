@@ -17,6 +17,7 @@ private:
 	bool install_git(std::wstring place);//安装git place即git地址
 	bool startProcess(std::wstring place);
 	bool search(std::wstring place);
+	void info2win(std::string);//把消息传到预留的槽中
 	std::wstring bin_place;
 public:
 	bool start();

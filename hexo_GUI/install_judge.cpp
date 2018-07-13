@@ -39,6 +39,10 @@ bool installer::search(std::wstring place)
 	else
 		return false;
 }
+void installer::info2win(std::string)
+{
+	//TO DO
+}
 bool installer::start()
 {
 	if (!search(bin_place))
