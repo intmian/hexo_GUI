@@ -14,11 +14,12 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTabWidget>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -27,50 +28,72 @@ class Ui_hexo_GUIClass
 {
 public:
     QWidget *centralWidget;
-    QTabWidget *tabWidget;
-    QWidget *tab;
-    QWidget *tab_2;
+    QTextBrowser *textBrowser;
+    QPushButton *theme_y_button;
+    QPushButton *up_button;
+    QPushButton *tsst_button;
+    QPushButton *new_blog_button;
+    QPushButton *ssh_button;
+    QPushButton *open_local_button;
+    QPushButton *org_blog_button;
+    QPushButton *hexo_y_button;
+    QLabel *label;
     QMenuBar *menuBar;
     QMenu *menu;
     QMenu *menu_2;
-    QStatusBar *statusBar;
 
     void setupUi(QMainWindow *hexo_GUIClass)
     {
         if (hexo_GUIClass->objectName().isEmpty())
             hexo_GUIClass->setObjectName(QStringLiteral("hexo_GUIClass"));
-        hexo_GUIClass->resize(600, 400);
+        hexo_GUIClass->resize(481, 472);
         centralWidget = new QWidget(hexo_GUIClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        tabWidget = new QTabWidget(centralWidget);
-        tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 611, 371));
-        tab = new QWidget();
-        tab->setObjectName(QStringLiteral("tab"));
-        tabWidget->addTab(tab, QString());
-        tab_2 = new QWidget();
-        tab_2->setObjectName(QStringLiteral("tab_2"));
-        tabWidget->addTab(tab_2, QString());
+        textBrowser = new QTextBrowser(centralWidget);
+        textBrowser->setObjectName(QStringLiteral("textBrowser"));
+        textBrowser->setGeometry(QRect(0, 210, 481, 231));
+        theme_y_button = new QPushButton(centralWidget);
+        theme_y_button->setObjectName(QStringLiteral("theme_y_button"));
+        theme_y_button->setGeometry(QRect(220, 70, 111, 28));
+        up_button = new QPushButton(centralWidget);
+        up_button->setObjectName(QStringLiteral("up_button"));
+        up_button->setGeometry(QRect(210, 140, 71, 28));
+        tsst_button = new QPushButton(centralWidget);
+        tsst_button->setObjectName(QStringLiteral("tsst_button"));
+        tsst_button->setGeometry(QRect(120, 130, 71, 28));
+        new_blog_button = new QPushButton(centralWidget);
+        new_blog_button->setObjectName(QStringLiteral("new_blog_button"));
+        new_blog_button->setGeometry(QRect(10, 110, 101, 28));
+        ssh_button = new QPushButton(centralWidget);
+        ssh_button->setObjectName(QStringLiteral("ssh_button"));
+        ssh_button->setGeometry(QRect(300, 150, 93, 28));
+        open_local_button = new QPushButton(centralWidget);
+        open_local_button->setObjectName(QStringLiteral("open_local_button"));
+        open_local_button->setGeometry(QRect(40, 30, 151, 28));
+        org_blog_button = new QPushButton(centralWidget);
+        org_blog_button->setObjectName(QStringLiteral("org_blog_button"));
+        org_blog_button->setGeometry(QRect(400, 90, 71, 28));
+        hexo_y_button = new QPushButton(centralWidget);
+        hexo_y_button->setObjectName(QStringLiteral("hexo_y_button"));
+        hexo_y_button->setGeometry(QRect(320, 20, 131, 28));
+        label = new QLabel(centralWidget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(10, 190, 72, 15));
         hexo_GUIClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(hexo_GUIClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 600, 26));
+        menuBar->setGeometry(QRect(0, 0, 481, 26));
         menu = new QMenu(menuBar);
         menu->setObjectName(QStringLiteral("menu"));
         menu_2 = new QMenu(menuBar);
         menu_2->setObjectName(QStringLiteral("menu_2"));
         hexo_GUIClass->setMenuBar(menuBar);
-        statusBar = new QStatusBar(hexo_GUIClass);
-        statusBar->setObjectName(QStringLiteral("statusBar"));
-        hexo_GUIClass->setStatusBar(statusBar);
 
         menuBar->addAction(menu->menuAction());
         menuBar->addAction(menu_2->menuAction());
 
         retranslateUi(hexo_GUIClass);
-
-        tabWidget->setCurrentIndex(1);
-
+        QObject::connect(tsst_button, SIGNAL(clicked()), tsst_button, SLOT(click()));
 
         QMetaObject::connectSlotsByName(hexo_GUIClass);
     } // setupUi
@@ -78,8 +101,15 @@ public:
     void retranslateUi(QMainWindow *hexo_GUIClass)
     {
         hexo_GUIClass->setWindowTitle(QApplication::translate("hexo_GUIClass", "hexo_GUI", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("hexo_GUIClass", "\345\210\235\345\247\213\345\214\226", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("hexo_GUIClass", "\344\275\277\347\224\250", Q_NULLPTR));
+        theme_y_button->setText(QApplication::translate("hexo_GUIClass", "\346\237\245\347\234\213theme\346\226\207\344\273\266", Q_NULLPTR));
+        up_button->setText(QApplication::translate("hexo_GUIClass", "\344\270\212\344\274\240\345\215\232\345\256\242", Q_NULLPTR));
+        tsst_button->setText(QApplication::translate("hexo_GUIClass", "\346\265\213\350\257\225\345\215\232\345\256\242", Q_NULLPTR));
+        new_blog_button->setText(QApplication::translate("hexo_GUIClass", "\345\210\233\345\273\272\346\226\260\347\232\204\345\215\232\345\256\242", Q_NULLPTR));
+        ssh_button->setText(QApplication::translate("hexo_GUIClass", "\346\237\245\347\234\213SSH\345\257\206\351\222\245", Q_NULLPTR));
+        open_local_button->setText(QApplication::translate("hexo_GUIClass", "\346\234\254\345\234\260\346\211\223\345\274\200hexo\346\226\207\344\273\266\345\244\271", Q_NULLPTR));
+        org_blog_button->setText(QApplication::translate("hexo_GUIClass", "\347\256\241\347\220\206\345\215\232\346\226\207", Q_NULLPTR));
+        hexo_y_button->setText(QApplication::translate("hexo_GUIClass", "\346\237\245\347\234\213hexo\346\240\267\345\274\217\346\226\207\344\273\266", Q_NULLPTR));
+        label->setText(QApplication::translate("hexo_GUIClass", "\345\217\215\351\246\210\360\237\221\207", Q_NULLPTR));
         menu->setTitle(QApplication::translate("hexo_GUIClass", "\350\256\276\347\275\256", Q_NULLPTR));
         menu_2->setTitle(QApplication::translate("hexo_GUIClass", "\345\205\263\344\272\216", Q_NULLPTR));
     } // retranslateUi

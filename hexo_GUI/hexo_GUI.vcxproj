@@ -113,6 +113,12 @@
     </QtRcc>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GeneratedFiles\qrc_hexo_GUI.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="hexo_GUI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="install_judge.cpp" />
@@ -128,6 +134,8 @@
     <QtRcc Include="hexo_GUI.qrc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_hexo_GUI.h" />
+    <ClInclude Include="GeneratedFiles\ui_Widget.h" />
     <ClInclude Include="install_judge.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
