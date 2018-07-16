@@ -38,6 +38,7 @@ public:
     QPushButton *org_blog_button;
     QPushButton *hexo_y_button;
     QLabel *label;
+    QPushButton *test;
     QMenuBar *menuBar;
     QMenu *menu;
     QMenu *menu_2;
@@ -46,7 +47,7 @@ public:
     {
         if (hexo_GUIClass->objectName().isEmpty())
             hexo_GUIClass->setObjectName(QStringLiteral("hexo_GUIClass"));
-        hexo_GUIClass->resize(481, 472);
+        hexo_GUIClass->resize(482, 470);
         centralWidget = new QWidget(hexo_GUIClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         textBrowser = new QTextBrowser(centralWidget);
@@ -66,7 +67,7 @@ public:
         new_blog_button->setGeometry(QRect(10, 110, 101, 28));
         ssh_button = new QPushButton(centralWidget);
         ssh_button->setObjectName(QStringLiteral("ssh_button"));
-        ssh_button->setGeometry(QRect(300, 150, 93, 28));
+        ssh_button->setGeometry(QRect(300, 100, 93, 28));
         open_local_button = new QPushButton(centralWidget);
         open_local_button->setObjectName(QStringLiteral("open_local_button"));
         open_local_button->setGeometry(QRect(40, 30, 151, 28));
@@ -79,10 +80,13 @@ public:
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(10, 190, 72, 15));
+        test = new QPushButton(centralWidget);
+        test->setObjectName(QStringLiteral("test"));
+        test->setGeometry(QRect(330, 150, 93, 28));
         hexo_GUIClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(hexo_GUIClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 481, 26));
+        menuBar->setGeometry(QRect(0, 0, 482, 26));
         menu = new QMenu(menuBar);
         menu->setObjectName(QStringLiteral("menu"));
         menu_2 = new QMenu(menuBar);
@@ -93,7 +97,6 @@ public:
         menuBar->addAction(menu_2->menuAction());
 
         retranslateUi(hexo_GUIClass);
-        QObject::connect(tsst_button, SIGNAL(clicked()), tsst_button, SLOT(click()));
 
         QMetaObject::connectSlotsByName(hexo_GUIClass);
     } // setupUi
@@ -110,6 +113,7 @@ public:
         org_blog_button->setText(QApplication::translate("hexo_GUIClass", "\347\256\241\347\220\206\345\215\232\346\226\207", Q_NULLPTR));
         hexo_y_button->setText(QApplication::translate("hexo_GUIClass", "\346\237\245\347\234\213hexo\346\240\267\345\274\217\346\226\207\344\273\266", Q_NULLPTR));
         label->setText(QApplication::translate("hexo_GUIClass", "\345\217\215\351\246\210\360\237\221\207", Q_NULLPTR));
+        test->setText(QApplication::translate("hexo_GUIClass", "test", Q_NULLPTR));
         menu->setTitle(QApplication::translate("hexo_GUIClass", "\350\256\276\347\275\256", Q_NULLPTR));
         menu_2->setTitle(QApplication::translate("hexo_GUIClass", "\345\205\263\344\272\216", Q_NULLPTR));
     } // retranslateUi
