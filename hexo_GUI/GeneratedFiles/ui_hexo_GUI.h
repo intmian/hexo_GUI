@@ -97,6 +97,7 @@ public:
         menuBar->addAction(menu_2->menuAction());
 
         retranslateUi(hexo_GUIClass);
+        QObject::connect(test, SIGNAL(clicked()), hexo_GUIClass, SLOT(on_test_clicked()));
 
         QMetaObject::connectSlotsByName(hexo_GUIClass);
     } // setupUi

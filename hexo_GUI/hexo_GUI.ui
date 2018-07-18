@@ -27,7 +27,7 @@
    <widget class="QPushButton" name="theme_y_button">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>160</x>
       <y>70</y>
       <width>111</width>
       <height>28</height>
@@ -41,7 +41,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>140</y>
+      <y>160</y>
       <width>71</width>
       <height>28</height>
      </rect>
@@ -53,8 +53,8 @@
    <widget class="QPushButton" name="tsst_button">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>130</y>
+      <x>100</x>
+      <y>160</y>
       <width>71</width>
       <height>28</height>
      </rect>
@@ -79,7 +79,7 @@
    <widget class="QPushButton" name="ssh_button">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>270</x>
       <y>100</y>
       <width>93</width>
       <height>28</height>
@@ -144,7 +144,7 @@
    <widget class="QPushButton" name="test">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>370</x>
       <y>150</y>
       <width>93</width>
       <height>28</height>
@@ -182,8 +182,25 @@
  <resources>
   <include location="hexo_GUI.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>test</sender>
+   <signal>clicked()</signal>
+   <receiver>hexo_GUIClass</receiver>
+   <slot>on_test_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <slots>
-  <signal>on_test_clicked()</signal>
+  <slot>on_test_clicked()</slot>
  </slots>
 </ui>

@@ -10,7 +10,7 @@ class hexo_GUI : public QMainWindow
 
 public:
 	hexo_GUI(QWidget *parent = Q_NULLPTR);
-	private slots:
+private slots:
 	void on_test_clicked()
 	{
 		QMessageBox::information(this, "test", "test");
