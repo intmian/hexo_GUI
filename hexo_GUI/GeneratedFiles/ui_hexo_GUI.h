@@ -55,19 +55,19 @@ public:
         textBrowser->setGeometry(QRect(0, 210, 481, 231));
         theme_y_button = new QPushButton(centralWidget);
         theme_y_button->setObjectName(QStringLiteral("theme_y_button"));
-        theme_y_button->setGeometry(QRect(220, 70, 111, 28));
+        theme_y_button->setGeometry(QRect(160, 70, 111, 28));
         up_button = new QPushButton(centralWidget);
         up_button->setObjectName(QStringLiteral("up_button"));
-        up_button->setGeometry(QRect(210, 140, 71, 28));
+        up_button->setGeometry(QRect(210, 160, 71, 28));
         tsst_button = new QPushButton(centralWidget);
         tsst_button->setObjectName(QStringLiteral("tsst_button"));
-        tsst_button->setGeometry(QRect(120, 130, 71, 28));
+        tsst_button->setGeometry(QRect(100, 160, 71, 28));
         new_blog_button = new QPushButton(centralWidget);
         new_blog_button->setObjectName(QStringLiteral("new_blog_button"));
         new_blog_button->setGeometry(QRect(10, 110, 101, 28));
         ssh_button = new QPushButton(centralWidget);
         ssh_button->setObjectName(QStringLiteral("ssh_button"));
-        ssh_button->setGeometry(QRect(300, 100, 93, 28));
+        ssh_button->setGeometry(QRect(270, 100, 93, 28));
         open_local_button = new QPushButton(centralWidget);
         open_local_button->setObjectName(QStringLiteral("open_local_button"));
         open_local_button->setGeometry(QRect(40, 30, 151, 28));
@@ -82,7 +82,7 @@ public:
         label->setGeometry(QRect(10, 190, 72, 15));
         test = new QPushButton(centralWidget);
         test->setObjectName(QStringLiteral("test"));
-        test->setGeometry(QRect(330, 150, 93, 28));
+        test->setGeometry(QRect(370, 150, 93, 28));
         hexo_GUIClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(hexo_GUIClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -97,7 +97,6 @@ public:
         menuBar->addAction(menu_2->menuAction());
 
         retranslateUi(hexo_GUIClass);
-        QObject::connect(test, SIGNAL(clicked()), hexo_GUIClass, SLOT(on_test_clicked()));
 
         QMetaObject::connectSlotsByName(hexo_GUIClass);
     } // setupUi

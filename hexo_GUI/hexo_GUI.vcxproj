@@ -122,6 +122,7 @@
     <ClCompile Include="hexo_GUI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="install_judge.cpp" />
+    <ClCompile Include="Widget.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="hexo_GUI.h" />
@@ -137,6 +138,12 @@
     <ClInclude Include="GeneratedFiles\ui_hexo_GUI.h" />
     <ClInclude Include="GeneratedFiles\ui_Widget.h" />
     <ClInclude Include="install_judge.h" />
+    <QtMoc Include="Widget.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB</Define>
+    </QtMoc>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
