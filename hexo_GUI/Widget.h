@@ -1,7 +1,7 @@
 #pragma once
 
 #include <QtWidgets/QMainWindow>
-#include "ui_hexo_GUI.h"
+#include "ui_Widget.h"
 #include "qmessagebox.h"
 
 class Widget : public QMainWindow
@@ -12,5 +12,5 @@ public:
 	Widget(QWidget *parent = Q_NULLPTR);
 private slots:
 private:
-	Ui::hexo_GUIClass ui;
+	Ui::Form ui;
 };

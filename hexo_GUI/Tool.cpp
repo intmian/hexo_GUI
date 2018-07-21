@@ -1,6 +1,6 @@
 #include "Tool.h"
 
-bool Easy_message_box::message_box(message_Type type, const char * title, const char * contain, int button_number = 2)
+bool Easy_message_box::message_box(message_Type type, const char * title, const char * contain, int button_number)
 {
 	QMessageBox* qm;
 	switch (type)
