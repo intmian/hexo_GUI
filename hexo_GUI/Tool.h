@@ -14,7 +14,7 @@ public:
 
 private:
 };
-class Easy_message_box
+class Easy_message_box//解决中文乱码，并将按钮本土化
 {
 public:
 	/*WARNING
@@ -22,5 +22,5 @@ public:
 	  INFOMATION
 	  ABOUT
 	  输入得非二按钮数量全被视为1*/
-	static bool message_box(message_Type type, const char *title, const char *contain, int button_number = 1);//只能使用一个或两个按钮
+	static bool message_box(message_Type type, const char *title, const char *contain, int button_number);//只能使用一个或两个按钮
 };
