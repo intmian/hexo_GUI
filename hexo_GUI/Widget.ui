@@ -38,25 +38,5 @@
   </widget>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>Form</receiver>
-   <slot>install()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>151</x>
-     <y>352</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>262</x>
-     <y>371</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
- <slots>
-  <slot>install()</slot>
- </slots>
+ <connections/>
 </ui>

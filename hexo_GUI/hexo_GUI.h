@@ -2,8 +2,8 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_hexo_GUI.h"
+#include "qmessagebox.h"
 #include <string>
-#include <Tool.h>
 
 using namespace std;
 
@@ -16,7 +16,6 @@ public:
 private slots:
 	void test(void)
 	{
-		Easy_message_box::message_box(ABOUT, "test", "test测试", 1);
 	}
 private:
 	Ui::hexo_GUIClass ui;

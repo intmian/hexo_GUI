@@ -27,8 +27,7 @@ int main(int argc, char *argv[])
 		{
 			Widget widge;
 			widge.show();
-			return a.exec();//exec前置避免在作用域中widge被析构
-			//TODO 用工厂模式
+			return a.exec();
 		}
 		else
 		{
@@ -44,5 +43,4 @@ int main(int argc, char *argv[])
 		h.show();
 		return a.exec();
 	}
-	//不可能抵达这里
 }

@@ -11,8 +11,6 @@ class Widget : public QMainWindow
 public:
 	Widget(QWidget *parent = Q_NULLPTR);
 private slots:
-	void ini_hexo();
 private:
 	Ui::Form ui;
-	void sad();
 };
