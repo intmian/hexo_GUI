@@ -182,8 +182,25 @@
  <resources>
   <include location="hexo_GUI.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>test</sender>
+   <signal>clicked()</signal>
+   <receiver>hexo_GUIClass</receiver>
+   <slot>test()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>375</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>193</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <slots>
-  <slot>on_test_clicked()</slot>
+  <slot>test()</slot>
  </slots>
 </ui>
