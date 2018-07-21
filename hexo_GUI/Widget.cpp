@@ -1,9 +1,11 @@
 #include "Widget.h"
-
+#include "install_judge.h"
 Widget::Widget(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
 }
+void Widget::ini_hexo()
+{
 
-//这些个代码是我复制的，后期改改
+}
