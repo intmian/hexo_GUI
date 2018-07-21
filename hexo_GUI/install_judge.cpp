@@ -15,19 +15,19 @@ std::string WStringToString(const std::wstring &wstr)
 	}
 	return str;
 }
-bool installer::install_node(std::wstring place)
+bool Installer::install_node(std::wstring place)
 {
 	wstring install_place = place + L"\\node.js";
 	return startProcess(install_place);
 }
 
-bool installer::install_git(std::wstring place)
+bool Installer::install_git(std::wstring place)
 {
 	wstring install_place = place + L"\\git.js";
 	return startProcess(install_place);
 }
 
-bool installer::search(std::wstring place)
+bool Installer::search(std::wstring place)
 {
 	wstring js_place = place + L"\\node.js";
 	wstring git_place = place + L"\\git";
@@ -39,11 +39,11 @@ bool installer::search(std::wstring place)
 	else
 		return false;
 }
-void installer::info2win(std::string)
+void Installer::info2win(std::string)
 {
 	//TO DO
 }
-bool installer::start()
+bool Installer::start()
 {
 	if (!search(bin_place))
 	{
@@ -54,11 +54,16 @@ bool installer::start()
 	temp = bin_place + L"node";//to change
 	if (install_node(temp))
 	{
+		output->addItem("node.js安装成功");
 		temp = bin_place + L"git";//to change
 		if (!install_git(temp))
 		{
 			MessageBoxA(NULL, "安装git失败，请重新下载hexo_GUI", "安装被终止", MB_OK);
 			return false;
+		}
+		else
+		{
+			output->addItem("git安装成功");
 		}
 	}
 	else
@@ -66,10 +71,14 @@ bool installer::start()
 		MessageBoxA(NULL, "安装node_js失败，请重新下载hexo_GUI", "安装被终止", MB_OK);
 		return false;
 	}
+
+
+
+	//TODO
 	return true;
 }
 
-bool installer::startProcess(std::wstring place)
+bool Installer::startProcess(std::wstring place)
 {
 	if (_wsystem((L"start " + place).data()) == 0)
 		return true;
@@ -77,7 +86,7 @@ bool installer::startProcess(std::wstring place)
 		return false;
 }
 
-installer::installer(std::wstring place) :
-	bin_place(place)
+Installer::Installer(std::wstring place, QListWidget* qListWidget) :
+	bin_place(place),output(qListWidget)
 {
 }

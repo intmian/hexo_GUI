@@ -7,10 +7,17 @@
 #define _STRING
 #include <string>
 #endif // !_STRING
+#ifndef _QTLIST
+#include <QtWidgets/QListWidget>
+#define _QTLIST
+#endif // !_QTLIST
 
-#ifndef _CLASS_installer
-#define _CLASS_installer
-class installer
+
+
+
+#ifndef _CLASS_Installer
+#define _CLASS_Installer
+class Installer
 {
 private:
 	bool install_node(std::wstring place);//安装node.js place即node js地址
@@ -19,10 +26,11 @@ private:
 	bool search(std::wstring place);
 	void info2win(std::string);//把消息传到预留的槽中
 	std::wstring bin_place;
+	QListWidget * output;
 public:
 	bool start();
-	installer(std::wstring place);//place是exe的上一层文件夹
+	Installer(std::wstring place, QListWidget* qListWidge);//place是exe的上一层文件夹
 };
-#endif // !_CLASS_installer
+#endif // !_CLASS_Installer
 
 std::string WStringToString(const std::wstring & wstr);
