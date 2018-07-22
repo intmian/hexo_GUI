@@ -34,3 +34,5 @@ public:
 #endif // !_CLASS_Installer
 
 std::string WStringToString(const std::wstring & wstr);
+QListWidget * operator<<(QListWidget *output, string your_output);
+//QListWidget * operator<<(QListWidget *output, char  *your_output);不合语法 两个指针不能重载 算是一种缺陷吧

@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <string>
 #include "qmessagebox.h"
+#include <cstdio>
 enum message_Type
 {
 	WARNING = 0,
@@ -23,4 +24,9 @@ public:
 	  ABOUT
 	  输入得非二按钮数量全被视为1*/
 	static bool message_box(message_Type type, const char *title, const char *contain, int button_number = 1);//只能使用一个或两个按钮
+};
+class Run_code
+{
+private:
+	FILE * PPipe;
 };
