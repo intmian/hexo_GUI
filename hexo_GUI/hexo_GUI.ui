@@ -14,144 +14,172 @@
    <string>hexo_GUI</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTextBrowser" name="textBrowser">
+   <widget class="QTabWidget" name="functional_area">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>210</y>
-      <width>481</width>
-      <height>231</height>
+      <x>130</x>
+      <y>10</y>
+      <width>341</width>
+      <height>421</height>
      </rect>
     </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="blog_area">
+     <attribute name="title">
+      <string>博客</string>
+     </attribute>
+     <widget class="QPushButton" name="up_button">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>71</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>上传博客</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="tsst_button">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>71</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>测试博客</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="article_area">
+     <attribute name="title">
+      <string>博文</string>
+     </attribute>
+     <widget class="QPushButton" name="new_blog_button">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>101</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>创建新的博客</string>
+      </property>
+     </widget>
+     <widget class="QListView" name="listView">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>80</y>
+        <width>256</width>
+        <height>301</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="configure_area">
+     <attribute name="title">
+      <string>配置</string>
+     </attribute>
+     <widget class="QPushButton" name="open_local_button">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>本地打开hexo文件夹</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="theme_y_button">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>50</y>
+        <width>111</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>查看theme文件</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hexo_y_button">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>210</y>
+        <width>131</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>查看hexo样式文件</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ssh_button">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>300</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>查看SSH密钥</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
-   <widget class="QPushButton" name="theme_y_button">
+   <widget class="QPushButton" name="button_to_blog">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>70</y>
-      <width>111</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>查看theme文件</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="up_button">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>160</y>
-      <width>71</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>上传博客</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="tsst_button">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>160</y>
-      <width>71</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>测试博客</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="new_blog_button">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>110</y>
-      <width>101</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>创建新的博客</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="ssh_button">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
+      <x>20</x>
       <y>100</y>
       <width>93</width>
       <height>28</height>
      </rect>
     </property>
     <property name="text">
-     <string>查看SSH密钥</string>
+     <string>博客</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="open_local_button">
+   <widget class="QPushButton" name="button_to_article">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>30</y>
-      <width>151</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>本地打开hexo文件夹</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="org_blog_button">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>90</y>
-      <width>71</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>管理博文</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="hexo_y_button">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>20</y>
-      <width>131</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>查看hexo样式文件</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>190</y>
-      <width>72</width>
-      <height>15</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>反馈👇</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="test">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>150</y>
+      <x>20</x>
+      <y>200</y>
       <width>93</width>
       <height>28</height>
      </rect>
     </property>
     <property name="text">
-     <string>test</string>
+     <string>博文</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_to_configuration">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>310</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>配置</string>
     </property>
    </widget>
   </widget>
@@ -182,24 +210,7 @@
  <resources>
   <include location="hexo_GUI.qrc"/>
  </resources>
- <connections>
-  <connection>
-   <sender>test</sender>
-   <signal>clicked()</signal>
-   <receiver>hexo_GUIClass</receiver>
-   <slot>test()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>375</x>
-     <y>191</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>349</x>
-     <y>193</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
  <slots>
   <slot>test()</slot>
  </slots>

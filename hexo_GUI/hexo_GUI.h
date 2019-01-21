@@ -13,10 +13,13 @@ class hexo_GUI : public QMainWindow
 
 public:
 	hexo_GUI(QWidget *parent = Q_NULLPTR);
-private slots:
-	void test(void)
-	{
-	}
 private:
 	Ui::hexo_GUIClass ui;
+
+	void ChangeTabIndex(int index);
+
+	void connect_slot_signal();
+signals:
+	void ToChangeTab(int index);  // 切换选项卡
+
 };

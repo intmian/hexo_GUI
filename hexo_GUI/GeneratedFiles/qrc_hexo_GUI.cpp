@@ -29,18 +29,18 @@ namespace QT_NAMESPACE {
 int QT_RCC_MANGLE_NAMESPACE(qInitResources_hexo_GUI)();
 int QT_RCC_MANGLE_NAMESPACE(qInitResources_hexo_GUI)()
 {
-	return 1;
+    return 1;
 }
 
 int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_hexo_GUI)();
 int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_hexo_GUI)()
 {
-	return 1;
+    return 1;
 }
 
 namespace {
-	struct initializer {
-		initializer() { QT_RCC_MANGLE_NAMESPACE(qInitResources_hexo_GUI)(); }
-		~initializer() { QT_RCC_MANGLE_NAMESPACE(qCleanupResources_hexo_GUI)(); }
-	} dummy;
+   struct initializer {
+       initializer() { QT_RCC_MANGLE_NAMESPACE(qInitResources_hexo_GUI)(); }
+       ~initializer() { QT_RCC_MANGLE_NAMESPACE(qCleanupResources_hexo_GUI)(); }
+   } dummy;
 }
